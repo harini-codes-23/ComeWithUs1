@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>comewithus</title>
+    <link rel="shortcut icon" href="fav.jpeg" type="image/x-icon">
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+h1, h3 {
+    text-align: center;
+    font-family: cursive;
+}
+span {
+    color: rgb(18, 96, 134);
+    text-shadow: 0 0 20px rgb(24, 126, 214);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.place {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    width: 220px;
+    height: 180px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: 0.5s;
+}
+.place:hover {
+    transform: translateY(-10px) scale(1.05);
+    cursor: pointer;
+}
+.place img {
+    border-radius: 10px;
+}
+.box {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+}
+button {
+    background: linear-gradient(45deg, #0b07e6, #9db515);
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+button:hover {
+    transform: scale(1.1);
+}
+.login-box {
+    margin-top: 50px;
+    border-radius: 20px;
+    width: 40%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(68, 66, 66, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+.place {
+    animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+    <div class="back">
+     <span style=" color:rgb(165, 151, 44); font-size:1.5cm;">Salam</span>
+    <br><h3>The famous places</h3>
+    <div class="container">
+        <div class="place">
+            <a href="beach.png"><img src="thiru forest.jpg" alt="" width="70%" height="70%" padding:20px></a>
+            <p>Yercaud Hill Station</p>
+        </div>
+        <div class="place">
+           <a href="courtallam-five-falls.jpg"> <img src="courtallam-five-falls.jpg" alt="" width="70%" height="70%"></a>
+            <p>Kiliyur Falls</p>
+        </div>
+        <div class="place">
+           <a href="chennai 3.png"> <img src="Delhi_gate_-_river_side_view.jpg" alt="" width="70%" height="70%"></a>
+            <p>Mettur Dam</p>
+        </div>
+        <div class="place">
+           <a href="chennai 4.png"> <img src="thiru1.jpg" alt="" width="70%" height="70%"></a>
+            <p>Sugavaneswarar Temple</p>
+        </div>
+        <div class="place">
+            <a href="chennai 5.png"><img src="Photograph-of-the-temple.jpg" alt="" width="70%" height="80%"></a>
+            <p>1008 Lingam Temple</p>
+        </div>
+    </div>
+    </div>
+    <div class="box">
+      <h2 >Best Time To Visit:
+      
+<button id="demo" onclick="changeText()" style=" backgroungcolor:black; color:rgb(10, 6, 6); "; >Best time</button></h2>
+<script>
+function changeText()
+{
+document.getElementById("demo").innerHTML = "November, December, January, February - pleasant weather and good for exploring.";
+}
+</script>
+ <div class="login-box">
+        <h2 style="font-family:'Times New Roman', Times, serif;">Book Your Dream </h2>
+          <h2 style="font-family:'Times New Roman', Times, serif;">Vacay Today!</h2>  
+           
+       
+        <br><br>
+        
+        <input type="text" placeholder="Name*" style="width:7cm;height:0.5cm;">
+        <br><br>
+        <input type="email" placeholder="Email id*" style="width:7cm;height:0.5cm;">
+        <br><br>
+        <input type="tel" placeholder="Phone Number*" style="width:7cm;height:0.5cm;">
+        <br><br><label>Date of trip start:</label><br>
+        <input type="date" placeholder="Date of trip start:" style="width:7cm;height:0.5cm;">
+        <br><br><label>Date of trip end:</label><br>
+        <input type="date" placeholder="Date of trip end:" style="width:7cm;height:0.5cm;">
+        <br><br>
+        <input type="number" placeholder="No of People*" style="width:7cm;height:0.5cm;">
+        <br><br>
+        <lable>Type of Hotel:</lable>
+        <input type="radio" name="hotel">5 Star Hotel
+        <input type="radio" name="hotel">3 Star Hotel
+        <input type="radio" name="hotel">Normal Hotel<br><br>
+        <lable>AC/NON-AC Room:</lable><input type="radio" name="acornon">AC Room
+        <input type="radio" name="acornon">NON-AC Room<br><br>
+        
+        <input type="number" style="width:7cm;height:0.5cm;" placeholder="Number of Room*" ><br><br>
+        <input type="number" max="10000" min="1000" placeholder="Buget:1000-10000*" style="width:7cm;height:0.5cm;" >
+        <br><br>
+        <lable>Vechical:</lable>
+        <input type="radio" name="vec">Car
+        <input type="radio" name="vec">Bus
+        <input type="radio" name="vec">Van<br><br>
+        <lable>If any quries :</lable>
+        <a href="contact.html"><button >contact us</button></a>
+         <br><br>
+        <button onclick="booknow()" type="submit" >Book now</button>
+         <p id="book"></p>
+        <script>
+          function booknow()
+          {
+            document.getElementById("book").innerHTML ="*****!Booked successfully*****";
+          }
+        </script>
+    </div>
+<script>
+function booknow() {
+    document.getElementById("book").innerHTML = " Booked Successfully!";
+}
+</script>
+</body>
+</html>

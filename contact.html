@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ComeWithUs - Contact</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+    color: #00f7ff;
+}
+.contact-container {
+    width: 60%;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.85);
+    color: black;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #00f7ff, #0072ff);
+    color: rgb(16, 160, 23);
+    font-size: 15px;
+    cursor: pointer;
+}
+.info {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+<h1>ComeWithUs - Travel</h1>
+<div class="contact-container">
+    <h2 style="text-align:center;">Contact Us</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button onclick="sendMsg()">Send Message</button><br><br>
+    <p id="msg" style="text-align:center;"></p>
+    
+    <div class="info">
+         Phone No: +91 98765 43210 <br><br>
+         Email: comewithus@gmail.com <br><br>
+         Instagram Id:@comewithus.123 <br><br>
+          Location: Near redhills, chennai.<br><br>
+        whatsapp Number:+91 6380914286 || +91 9876543021 <br><br>
+        <button onclick="goback()">Back</button>
+    </div>
+</div>
+<script>
+function sendMsg() {
+    document.getElementById("msg").innerHTML = "Message Sent Successfully!";}
+      </script>
+      <script>
+        function goback(){
+            window.history.back() }
+            </script>
+
+
+
+</body>
+</html>

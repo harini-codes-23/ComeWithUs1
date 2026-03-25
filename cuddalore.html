@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comewithus</title>
+    <link rel="shortcut icon" href="fav.jpeg" type="image/x-icon">
+    <style>
+   body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('background.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+h1, h3 {
+    text-align: center;
+    font-family: cursive;
+}
+span {
+    
+    text-shadow: 0 0 20px gold;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.place {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    width: 220px;
+    height: 180px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: 0.5s;
+}
+.place:hover {
+    transform: translateY(-10px) scale(1.05);
+    cursor: pointer;
+}
+.place img {
+    border-radius: 10px;
+}
+.box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgb(81, 32, 32);
+    background-size: cover;
+    background-position: center;
+}
+button {
+    background: linear-gradient(45deg, #0fc112, #9db515);
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+button:hover {
+    transform: scale(1.1);
+}
+.login-box {
+    margin-top: 50px;
+    border-radius: 20px;
+    width: 40%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(68, 66, 66, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+
+.place {
+    animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+     </style>
+</head>
+<body>
+    <div class="back">
+     <span style=" color:rgb(38, 100, 155); font-size:1.5cm;">Cuddalore</span>
+    <br><h3>popular places</h3>
+    <div class="container">
+        <div class="place">
+            <a href="5(1).png"><img src="5(1).png" alt="" width="70%" height="50%" padding:20px></a>
+            <p>Pichavaram Mangrove Forest</p>
+        </div>
+        <div class="place">
+           <a href="5(2).png"> <img src="5(2).png" alt="" width="70%" height="70%"></a>
+            <p>Chidambaram Nataraja Temple</p>
+        </div>
+        <div class="place">
+           <a href="5(3).png"> <img src="5(3).png" alt="" width="70%" height="70%"></a>
+            <p>Silver Beach</p>
+        </div>
+        <div class="place">
+           <a href="5(4).png"> <img src="5(4).png" alt="" width="70%" height="70%"></a>
+            <p>Veera Raghava Perumal Temple</p>
+        </div>
+        <div class="place">
+            <a href="5(5).png"><img src="5(5).png" alt="" width="70%" height="80%"></a>
+            <p>Fort St. David</p>
+        </div>
+    </div>
+    </div>
+    <div class="box">
+      <h2 >Best Time To Visit:
+      
+<button id="demo" onclick="changeText()" style=" backgroungcolor:black; color:rgb(10, 6, 6); "; >Best time</button></h2>
+<script>
+function changeText()
+{
+document.getElementById("demo").innerHTML = "November, December, January, February - pleasant weather and good for exploring.";
+}
+</script>
+        
+    </div>
+   <div class="login-box">
+        <h2 style="font-family:'Times New Roman', Times, serif;">Book Your Dream </h2>
+          <h2 style="font-family:'Times New Roman', Times, serif;">Vacay Today!</h2>  
+           
+       
+       <br><br>
+        
+        <input type="text" id="name" placeholder="Name*" style="width:7cm;height:0.5cm;">
+        <br><br>
+        <input type="email" id="email" placeholder="Email id*" style="width:7cm;height:0.5cm;">
+        <br><br>
+        <input type="tel" id="tel" placeholder="Phone Number*" style="width:7cm;height:0.5cm;">
+        <br><br><label>Date of trip start:</label><br>
+        <input type="date" id="dstart" placeholder="Date of trip start:" style="width:7cm;height:0.5cm;">
+        <br><br><label>Date of trip end:</label><br>
+        <input type="date" id="dend" placeholder="Date of trip end:" style="width:7cm;height:0.5cm;">
+        <br><br>
+        <input type="number" id="no" placeholder="No of People*" style="width:7cm;height:0.5cm;">
+        <br><br>
+        <lable>Type of Hotel:</lable>
+        <input type="radio"  name="hotel" value="5 Star">5 Star Hotel
+        <input type="radio"  name="hotel" value="3 star">3 Star Hotel
+        <input type="radio"  name="hotel" value="Normal">Normal Hotel<br><br>
+        <lable>AC/NON-AC Room:</lable><input type="radio" name="acornon" value="Ac">AC Room
+        <input type="radio" id="ac" name="acornon" value="Non-Ac">NON-AC Room<br><br>
+        
+        <input type="number" id="noroom" style="width:7cm;height:0.5cm;" placeholder="Number of Room*" ><br><br>
+        <input type="number" id="budget" max="10000" min="1000" placeholder="Buget:1000-10000*" style="width:7cm;height:0.5cm;" >
+        <br><br>
+        <lable>Vechical:</lable>
+        <input type="radio"  name="vec" value="Car">Car
+        <input type="radio"  name="vec" value="Bus">Bus
+        <input type="radio" name="vec" value="Van">Van<br><br>
+        <lable>If any quries :</lable>
+       <a href=""> <button style=" background-color: greenyellow;">contact us</button></a>
+         <br><br>
+         <button   onclick="generateticket()"  style="background-color:  greenyellow;border-color: green; border-radius: 20px; width:5cm; height: 0.7cm;">Book now</button>
+         <p id="book"></p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+          </script><script>
+          function generateticket()
+          {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("tel").value;
+    let start = document.getElementById("dstart").value;
+    let end = document.getElementById("dend").value;
+    let people = document.getElementById("no").value;
+    let rooms = document.getElementById("noroom").value;
+    let budget = document.getElementById("budget").value;
+    let hotel = document.querySelector('input[name="hotel"]:checked')?.nextSibling.textContent || "Not selected";
+    let ac = document.querySelector('input[name="acornon"]:checked')?.nextSibling.textContent || "Not selected";
+    let vehicle = document.querySelector('input[name="vec"]:checked')?.nextSibling.textContent || "Not selected";
+if (!name || !email || !phone || !start || !end || !people || !rooms || !budget || !hotel || !ac || !vehicle)
+    {
+        alert("⚠️ Please fill all the details before booking!");
+        return;
+    }
+    
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.text("Travel Booking Ticket", 20, 20);
+    doc.text("Name: " + name, 20, 30);
+    doc.text("Email: " + email, 20, 40);
+    doc.text("Phone: " + phone, 20, 50);
+    doc.text("Start Date: " + start, 20, 60);
+    doc.text("End Date: " + end, 20, 70);
+    doc.text("People: " + people, 20, 80);
+    doc.text("Rooms: " + rooms, 20, 90);
+    doc.text("Budget: " + budget, 20, 100);
+    doc.text("Hotel: " + hotel, 20, 110);
+    doc.text("Room Type: " + ac, 20, 120);
+    doc.text("Vehicle: " + vehicle, 20, 130);
+    let total = budget*people;
+   doc.text("total bill:"+ total,20,140);
+
+    doc.save("Booking_Ticket.pdf");
+
+    console.log("Booked successfully");
+
+}
+        </script>
+    </div>
+    
+</body>
+</html>
